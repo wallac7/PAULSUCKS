@@ -1,12 +1,46 @@
 <head>
+<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+</script>
 
+<script>
+$( document ).ready(function() {
+  $('#sexybutton').on("click", function (){
+  console.log("Log sucessful");
+  });
+
+  var request = $.ajax({
+    url: "http://localhost:8080/testajax.html",
+  });
+
+  request.done(function( data ) {
+var parsedajax= JSON.parse(data);
+console.log(parsedajax)
+  $('#singlebachelor').append(parsedajax.message);
+  });
+});
+</script>
 
 </head>
 
 <body>
 
-<div>
+<div id="singlebachelor">
 "Hello Walter"
 
 </div>
+
+<div>
+"I must say"
+
+</div>
+<script>
+$('#singlebachelor').append ("Paul is a loser");
+</script>
+<button id="sexybutton">
+"Click me. I'm yours."
+
+</button>
 </body>
