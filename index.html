@@ -20,6 +20,26 @@ var parsedajax= JSON.parse(data);
 console.log(parsedajax)
   $('#singlebachelor').append(parsedajax.message);
   });
+
+
+
+//Adds an item when the button is clicked
+
+  $('#additem').on("click", function (){
+    var request = $.ajax({
+      method: "POST",
+      data: { name: "newitem" },
+      url: "http://localhost:8080/additem.php",
+    });
+
+    request.done(function( data ) {
+    });
+
+  });
+
+
+
+
 });
 </script>
 
@@ -41,6 +61,13 @@ $('#singlebachelor').append ("Paul is a loser");
 </script>
 <button id="sexybutton">
 "Click me. I'm yours."
+
+</button>
+
+<br>
+<input type="text" id="todoitem" name="newitem" />
+
+<button id="additem">
 
 </button>
 </body>
