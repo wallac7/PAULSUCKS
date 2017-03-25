@@ -7,7 +7,7 @@ $database= "WaltersDatabase";
 
 $newusernamepart1= $_GET["firstname"];
 $newusernamepart2= $_GET["lastname"];
-#$newpassword= $_GET["password"];
+#$newpassword= $_GET["password"];\
 $newemail= $_GET["email"];
 
 // Create connection

@@ -13,11 +13,10 @@ if (!$conn) {
 }
 echo "Connected successfully";
 
-$postalservice= ($_POST["name"]);
+//$postalservice= ($_POST["name"]);
 
-// sql to create table
-$sql = "INSERT INTO todolist (task)
-VALUES (".$postalservice.");";
+// sql to delete a record
+$sql = "DELETE FROM todolist WHERE id=1";
 
 if ($conn->query($sql)===TRUE) {
     echo "Table myusers created successfully";

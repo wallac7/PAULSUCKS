@@ -1,2 +1,1 @@
-Paul is a loser of the first category. Doesn't even know how Source Tree works.
-Geez :P
+This is a website designed to test the todolist and its functions to be sure they are working correctly.

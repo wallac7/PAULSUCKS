@@ -29,7 +29,7 @@ console.log(parsedajax)
     var request = $.ajax({
       method: "POST",
       data: { name: "newitem" },
-      url: "http://localhost:8080/additem.php",
+      url: "http://localhost:8080/todoitem_files/additem.php",
     });
 
     request.done(function( data ) {
@@ -38,9 +38,26 @@ console.log(parsedajax)
   });
 
 
+    $('#changestatus').on("click", function (){
+      var request = $.ajax({
+        method: "POST",
+        data: { name: "newstatus" },
+        url: "http://localhost:8080/todoitem_files/changestatus.php",
+      });
 
+      request.done(function( data ) {
+      });
 
-});
+    $('#edittodoitem').on("click", function (){
+        var request = $.ajax({
+          method: "POST",
+          data: { name: "editedtask" },
+          url: "http://localhost:8080/todoitem_files/edittodoitem.php",
+        });
+
+      request.done(function( data ) {
+      });  
+
 </script>
 
 </head>
@@ -56,9 +73,11 @@ console.log(parsedajax)
 "I must say"
 
 </div>
+
 <script>
 $('#singlebachelor').append ("Paul is a loser");
 </script>
+
 <button id="sexybutton">
 "Click me. I'm yours."
 
@@ -68,6 +87,15 @@ $('#singlebachelor').append ("Paul is a loser");
 <input type="text" id="todoitem" name="newitem" />
 
 <button id="additem">
+Add new item
+</button>
+
+<button id= "newstatus">
+Change status
+</button>
+
+<button id= "editedtask">
 
 </button>
+
 </body>
