@@ -1,14 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once("../TODOLISTFRAMEWORK/databaseframework.php");
 
 $sql = "UPDATE todoitem SET task=0 WHERE id=2";
+
+if ($conn->query($sql)===TRUE) {
+    echo "Table myusers created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+$conn->close()
